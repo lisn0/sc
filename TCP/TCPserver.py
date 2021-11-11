@@ -12,5 +12,9 @@ tcp_server.listen(0)
 
 while True:
     conn, address_client = tcp_server.accept()
-    print('Accepted connection from {}:{}'.format(address_client[0], address_client[1]))
-
+    with conn:
+        print('Accepted connection from {}:{}'.format(address_client[0], address_client[1]))
+        while True:
+            data = conn.recv(1024)
+            if not data:
+                break
