@@ -16,6 +16,8 @@ while True:
         print('Accepted connection from {}:{}'.format(address_client[0], address_client[1]))
         while True:
             data = conn.recv(1024)
-            if not data:
-                break
-            conn.send(b"OK")
+            if data:
+                conn.send(b"OK")
+            else:
+                conn.close()
+
