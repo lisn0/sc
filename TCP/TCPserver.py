@@ -1,7 +1,7 @@
 import socket
 
 HOST = ''
-PORT = 8001
+PORT = 8002
 
 address = (HOST, PORT)
 
@@ -14,10 +14,12 @@ while True:
     conn, address_client = tcp_server.accept()
     with conn:
         print('Accepted connection from {}:{}'.format(address_client[0], address_client[1]))
-        while True:
-            data = conn.recv(1024)
-            if data:
-                conn.send(b"OK")
-            else:
-                conn.close()
+        data = conn.recv(1024)
+        if len(data) > 0:
+            conn.send(b"OK")
+        else:
+            conn.close()
+            print("client disconnected")
+        conn.close()
 
+tcp_server.close()
