@@ -29,7 +29,7 @@ def main():
     finger_server.bind(address)
     finger_server.listen(0)
 
-    while True:  # TODO ha
+    while True:  # TODO handle errors
         conn, address_client = finger_server.accept()
         with conn:
             print('Accepted connection from {}:{}'.format(address_client[0], address_client[1]))
