@@ -34,16 +34,15 @@ def main():
         conn, address_client = finger_server.accept()
         with conn:
             print('Accepted connection from {}:{}'.format(address_client[0], address_client[1]))
-            data = conn.recv(1024)
+            data = str(conn.recv(1024))
             if len(data) > 0:
-                command = 'finger {}'.format(data)
+                command = 'finger {}'.format(data[1:])
                 output = subprocess.getoutput([command])  # the commands module is deprecated since Python 2.6
                 conn.send(str.encode(output))
                 logging.info(f'nom de login demandé : {data}, adresse du client: {address_client[0]}')
             else:
                 conn.close()
                 print("client disconnected")
-            conn.close()
     finger_server.close()
 
 
