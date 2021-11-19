@@ -46,6 +46,7 @@ def menu(proxy):
         print(rpc_function())
     menu(proxy)
 
+
 if __name__ == '__main__':
     port = 52432
 

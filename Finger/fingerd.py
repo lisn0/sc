@@ -12,6 +12,7 @@ import logging
 # https://docs.python.org/3/howto/logging.html
 logging.basicConfig(filename='/tmp/finger.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
 
+
 def write_pid():
     outputFile = open('/tmp/finger.pid', "w")  # https://stackoverflow.com/a/66367904
     pid = str(os.getpid())

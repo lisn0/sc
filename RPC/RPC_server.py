@@ -26,8 +26,6 @@ class Calcul(rfoo.BaseHandler):
         return abs(a)
 
 
-
-
 if __name__ == '__main__':
     port = 52431
     rfoo.InetServer(Calcul).start(host='', port=port)  # "Start server - depratcated."""

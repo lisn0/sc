@@ -22,8 +22,6 @@ def finger(host, args):
         print(buf)
 
 
-
-
 def main():
     login = gethostname()
     host = ""

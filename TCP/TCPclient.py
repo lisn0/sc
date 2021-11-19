@@ -2,7 +2,7 @@ import socket
 from time import sleep
 
 HOST = 'localhost'
-PORT = 8002
+PORT = 8000
 
 server = (HOST, PORT)
 
