@@ -15,7 +15,9 @@
 
 ```shell
 sudo apt-get install build-essential
-pip install cython twitter requests
+git clone https://github.com/lisn0/sc.git
+cd sc
+pip install -r requirements.txt
 ```
 
 ### Installing rfoo
