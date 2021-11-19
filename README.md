@@ -1,8 +1,5 @@
 # Client Server Project
 
-University project
-
-
 ## Getting Started
 
 ### Dependencies
@@ -26,14 +23,6 @@ git clone https://github.com/aaiyer/rfoo
 cd rfoo
 sudo python setup.py install
 ```
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
 ## Help
 
 If any issue is encountered please open an issue detailing the problem
