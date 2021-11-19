@@ -8,12 +8,14 @@
 * rfoo
 * python3
 * cython
+* twitter
+* requests
 
-### Installing cython
+### Installing prerequisites
 
 ```shell
 sudo apt-get install build-essential
-pip install cython
+pip install cython twitter requests
 ```
 
 ### Installing rfoo
