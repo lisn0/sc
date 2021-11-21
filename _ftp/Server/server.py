@@ -8,7 +8,7 @@ print("\nWelcome to the FTP server.\n\nTo get started, connect a client.")
 
 # Initialise socket stuff
 TCP_IP = "127.0.0.1" # Only a local server
-TCP_PORT = 4321 # Just a random choice
+TCP_PORT = 4323 # Just a random choice
 BUFFER_SIZE = 1024 # Standard size
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((TCP_IP, TCP_PORT))
@@ -27,6 +27,7 @@ def list_files():
     total_directory_size = 0
     # Send over the file names and sizes whilst totaling the directory size
     for i in listing:
+        time.sleep(1)
         # File name size
         conn.send(struct.pack("i", sys.getsizeof(i)))
         # File name
@@ -83,7 +84,7 @@ def quit():
     # Close and restart the server
     conn.close()
     s.close()
-    os.execl(sys.executable, sys.executable, *sys.argv)
+    # os.execl(sys.executable, sys.executable, *sys.argv)
 
 while True:
     # Enter into a while loop to recieve commands from client

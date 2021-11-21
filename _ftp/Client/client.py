@@ -5,7 +5,7 @@ import struct
 
 # Initialise socket stuff
 TCP_IP = "127.0.0.1"  # Only a local server
-TCP_PORT = 4321  # Just a random choice
+TCP_PORT = 4323  # Just a random choice
 BUFFER_SIZE = 1024  # Standard chioce
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
