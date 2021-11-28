@@ -1,9 +1,3 @@
-# 2: i don't have it in my system, i use systemd
-# 3 : /etc/init.d/service start|stop|restart
-# 4 : *.pid files
-# 5 : ...
-
-
 import socket
 import subprocess
 import os
@@ -13,8 +7,8 @@ import logging
 logging.basicConfig(filename='/tmp/finger.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
 
 
-def write_pid():
-    outputFile = open('/tmp/finger.pid', "w")  # https://stackoverflow.com/a/66367904
+def writePid():
+    outputFile = open('/tmp/finger.pid', "w")
     pid = str(os.getpid())
     outputFile.write(pid)
     outputFile.close()
@@ -43,6 +37,7 @@ def main():
             else:
                 conn.close()
                 print("client disconnected")
+                break
     finger_server.close()
 
 

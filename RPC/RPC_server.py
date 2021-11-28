@@ -20,9 +20,9 @@ class Calcul(rfoo.BaseHandler):
         return b - a
 
     def quotient(self, a, b):
-        return (a / b) if b != 0 else 'error'
+        return (a / b) if b != 0 else 'can\'t devide by 0'
 
-    def absolue(self, a):
+    def absolute(self, a):
         return abs(a)
 
 

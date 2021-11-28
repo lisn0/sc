@@ -4,8 +4,8 @@ import json
 
 # To set your enviornment variables in your terminal run the following line:
 # export 'BEARER_TOKEN'='<your_bearer_token>'
-bearer_token = os.environ.get("BEARER_TOKEN")
-
+# bearer_token = os.environ.get("BEARER_TOKEN")
+bearer_token = 'AAAAAAAAAAAAAAAAAAAAAJDEVwEAAAAARs044V43%2BHmpesWOt67Y0hKw7IA%3DYYCv3T17Jl3GbS1ytofomzYHHdOnzEXdRizkrc95vuCelkYlgc'
 
 def create_url():
     # Specify the usernames that you want to lookup below

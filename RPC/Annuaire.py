@@ -15,7 +15,6 @@ class Annuaire(rfoo.BaseHandler):
         self.repertoire[nom] = number
 
     def trouverNumero(self, nom):
-
         return self.repertoire.get(nom)
 
     def nbNumeros(self):
@@ -26,12 +25,13 @@ class Annuaire(rfoo.BaseHandler):
 
     def supprimerEntree(self, nom):
         del self.repertoire[nom]
-        return 'deleted successfully'
+        return 'entree supprimé avec succès'
+
     def supprimerTout(self):
         self.repertoire = {}
-        return 'deleted successfully'
+        return 'repertoire supprimé avec succès'
 
 
 if __name__ == '__main__':
-    port = 52432
+    port = 52525
     rfoo.InetServer(Annuaire).start(host='', port=port)  # "Start server - depratcated."""

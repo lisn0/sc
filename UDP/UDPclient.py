@@ -1,9 +1,8 @@
 import socket
 
-SERVER = ('127.0.0.1', 9875)
-UDP_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-UDP_client.sendto(('Test message').encode(), SERVER)
+if __name__ == "__main__":
+    SERVER = ('127.0.0.1', 9898)
+    UDP_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    UDP_client.sendto('Hello udp World!'.encode(), SERVER)
 
-# 3.1.2.8: Message : b'Test message'  from address :  127.0.0.1
-# 3.1.2.9: TODO
